@@ -101,7 +101,8 @@ void d3(char *input)
             santa.y--;
             redmen[ri].y--;
             break;
-        case 'V' | 'v':
+        case 'v':
+        case 'V':
             santa.y++;
             redmen[ri].y++;
             break;

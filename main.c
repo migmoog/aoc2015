@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
+#include <ctype.h>
 #include "days.h"
 
 #define BUF_SIZE 1024
@@ -23,6 +24,11 @@ int main(int argc, char **argv) {
         input = input_med;
         memcpy(input+input_len, buffer, len + 1);
         input_len += len;
+    }
+
+    // trimming whitespace
+    if (isspace(input[input_len-1])) {
+        input[input_len-1] = '\0';
     }
 
     if (input_len == 0) {
