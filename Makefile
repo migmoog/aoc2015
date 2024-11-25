@@ -1,5 +1,5 @@
 CC :=gcc
-CFLAGS :=-g -std=c99 -Wall -Werror -Wno-error=deprecated-declarations
+CFLAGS :=-g -std=c2x -Wall -Werror -Wno-error=deprecated-declarations
 LIBS := -lssl -lcrypto -lm
 
 SOURCES := $(wildcard *.c)

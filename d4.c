@@ -43,18 +43,8 @@ int find_lowest(char *input, int zeroes)
     return out;
 }
 
-void has_n_zeroes_tests() {
-    // testing has_n_zeroes
-    unsigned char hash[MD5_DIGEST_LENGTH];
-    hash_problem(hash, "abcdef", 609043);
-    assert(has_n_zeroes(hash, 5));
-    hash_problem(hash, "abcdef", 9962624);
-    assert(has_n_zeroes(hash, 6));
-}
-
 void d4(char *input)
 {
-    // has_n_zeroes_tests();
     printf("Day 4 part 1: %d\n", find_lowest(input, 5));
     printf("Day 4 part 2: %d\n", find_lowest(input, 6));
 }
